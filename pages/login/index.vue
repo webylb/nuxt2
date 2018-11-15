@@ -1,7 +1,7 @@
 <template>
   <el-row>
     <el-col :xs="24" :sm="24" :md="24" :lg="24" :xl="24">
-      <div class="register warp relative">
+      <div class="login warp relative">
         <div class="back-home absolute">
           <nuxt-link to="/" class="register-back-link">
             <div class="back-icon el-icon-arrow-left" />
@@ -9,7 +9,7 @@
           </nuxt-link>
         </div>
         <div class="register-form absolute">
-          <h2 class="form-title">注册</h2>
+          <h2 class="form-title">登录</h2>
           <el-form ref="ruleForm" :model="ruleForm" :rules="rules" status-icon class="demo-ruleForm">
             <el-form-item prop="phone">
               <el-input v-model.number="ruleForm.phone" autocomplete="off" prefix-icon="el-icon-mobile-phone" placeholder="请输入手机号码" />
@@ -17,31 +17,24 @@
             <el-form-item prop="pass">
               <el-input v-model="ruleForm.pass" type="password" autocomplete="off" prefix-icon="el-icon-mobile-phone" placeholder="请输入密码"/>
             </el-form-item>
-            <el-form-item prop="Code">
-              <el-col :span="15">
-                <el-input v-model="ruleForm.Code" type="text" autocomplete="off" prefix-icon="el-icon-mobile-phone" placeholder="请输入验证码" />
-              </el-col>
-              <el-col v-if="isCode" :span="7" :offset="2">
-                <el-button class="code-info" type="info">获取验证码</el-button>
-              </el-col>
-              <el-col v-else :span="7" :offset="2">
-                <img :src="Code" class="code-img" alt="验证码">
-              </el-col>
-            </el-form-item>
             <el-form-item>
-              <el-button class="subRegisterForm" @click="submitForm('ruleForm')">注册</el-button>
+              <el-button class="subRegisterForm" @click="submitForm('ruleForm')">登录</el-button>
               <!-- <el-button @click="resetForm('ruleForm')">重置</el-button> -->
+            </el-form-item>
+            <el-form-item >
+              <el-checkbox-group v-model="ruleForm.remember">
+                <el-checkbox label="记住密码" name="remember" />
+              </el-checkbox-group>
             </el-form-item>
             <el-form-item>
               <div class="registerForm-bottom">
                 <nuxt-link to="/" class="fb-link">
-                  注册即同意《GOODATALL用户注册协议》
+                  忘记密码?
                 </nuxt-link>
-                <el-button type="text">
-                  <nuxt-link to="/login" class="bc-link">
-                    登录
-                  </nuxt-link>
-                </el-button>
+                |
+                <nuxt-link to="/register" class="bc-link">
+                  注册
+                </nuxt-link>
               </div>
             </el-form-item>
           </el-form>
@@ -71,7 +64,7 @@ export default {
       ruleForm: {
         phone: '',
         pass: '',
-        Code: ''
+        remember: true
       },
       rules: {
         phone: [
@@ -82,12 +75,7 @@ export default {
           { required: true, message: '请输入密码',trigger: 'blur'},
           { min: 6, message: '密码长度最少为6位', trigger: 'blur' }
         ],
-        Code: [
-          {required: true, message: '请输入验证码'},
-          { validator: validateCode, trigger: 'blur' }
-        ]
-      },
-      isCode: true
+      }
     };
   },
   methods: {
@@ -108,12 +96,17 @@ export default {
 }
 </script>
 
+<style>
+  .login .el-checkbox__input.is-checked+.el-checkbox__label {
+    color: #333;
+  }
+</style>
 <style lang="less" scoped>
 //定义变量
 @color : #FA6600;
 @hoverColor: rgb(190,63,0);
 
-.register {
+.login {
   width: 100vw;
   height: 100vh;
   background: url("/image/register-bg.jpg") no-repeat center;
@@ -168,28 +161,30 @@ export default {
         background-color: @hoverColor;
       }
     }
+    .el-checkbox__input.is-checked+.el-checkbox__label {
+      color: #333;
+    }
     .registerForm-bottom {
       display: -webkit-box;
       display: -webkit-flex;
       display: -ms-flexbox;
       display: flex;
-      justify-content: space-between;
-      -webkit-justify-content: space-between;
-      -moz-justify-content: space-between;
-      -ms-justify-content: space-between;
-      -o-justify-content: space-between;
+      justify-content: flex-end;
+      -webkit-justify-content: flex-end;
+      -moz-justify-content: flex-end;
+      -ms-justify-content: flex-end;
+      -o-justify-content: flex-end;
       line-height: 30px;
       .fb-link {
         display: block;
         height: 100%;
         color:#333;
+        margin-right: 10px;
       }
-      .el-button {
+      .bc-link {
+        color:#333;
+        margin-left: 10px;
         font-size: 18px;
-        padding: 0;
-        .bc-link {
-          color:#333;
-        }
       }
     }
   }

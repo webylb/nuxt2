@@ -1,5 +1,6 @@
 <template>
-  <section class="container">
+  <section class="wrap">
+    <platformHeader/>
     <div class="testdiv">
       <logo/>
       <h1 class="title">
@@ -26,10 +27,12 @@
 
 <script>
 import Logo from '~/components/Logo.vue'
+import platformHeader from '~/components/platformHeader'
 
 export default {
   components: {
-    Logo
+    Logo,
+    platformHeader
   }
 }
 </script>

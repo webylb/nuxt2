@@ -1,4 +1,102 @@
-.container {
+//格式化
+html, body, h1, h2, h3, h4, h5, h6, ul, li, a, div, p, span, em, b, img, table, td, tr, th, button, input, textarea, dl, dt, dd {
   margin: 0;
   padding: 0;
+  outline: none;
+  list-style-type: none;
 }
+body {
+  font-size: 14px;
+  min-width: 1200px;
+  background-color: #fff;
+}
+a, a:hover, a:active {
+  outline: none;
+  text-decoration: none;
+}
+input, select, textarea, button {
+  border: none;
+  outline: none;
+  background: none;
+}
+button {
+  cursor: pointer;
+}
+input[type=button] {
+  cursor: pointer;
+}
+ol, ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+/* 清除浮动 */
+.clearfix {
+  *zoom: 1;
+}
+.clearfix:after {
+  display: block;
+  overflow: hidden;
+  clear: both;
+  height: 0;
+  visibility: hidden;
+  content:".";
+}
+.fixed {
+  position: fixed;
+}
+.relative {
+  position: relative;
+}
+.absolute {
+  position: absolute;
+}
+.left {
+  float: left;
+}
+.right {
+  float: right;
+}
+.hide {
+  display: none;
+}
+.opacity {
+  opacity: 0;
+}
+img {
+  border: none;
+}
+input {
+  -webkit-box-shadow: 0 0 0 1000px #fff inset!important;
+  box-shadow: 0 0 0 1000px #fff inset!important;
+}
+input::-webkit-input-placeholder {
+  /* WebKit browsers */
+  color: #7f8184;
+}
+input:-moz-placeholder {
+  /* Mozilla Firefox 4 to 18 */
+  color: #7f8184;
+}
+input::-moz-placeholder {
+  /* Mozilla Firefox 19+ */
+  color: #7f8184;
+}
+input:-ms-input-placeholder {
+  /* Internet Explorer 10+ */
+  color: #7f8184;
+}
+.wrap {
+  width: 100%;
+  position: relative;
+}
+.container {
+  width: 1200px;
+  margin: 0 auto;
+  position: relative;
+}
+
+
+//定义变量
+@color : #FA6600;
+@hoverColor: rgb(190,63,0);
