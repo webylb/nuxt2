@@ -21,13 +21,18 @@ module.exports = {
   /*
   ** Customize the progress-bar color
   */
-  loading: { color: '#fff' },
+  loading: { color: '#blue', height: '5px' },
 
   /*
   ** Global CSS
   */
   css: [
-    'element-ui/lib/theme-chalk/index.css'
+    'element-ui/lib/theme-chalk/index.css',
+    '~assets/style/main.css',//路由切换css
+    {
+      src: '~assets/style/common.less',
+      lang: 'less'
+    } //全局less
   ],
 
   /*

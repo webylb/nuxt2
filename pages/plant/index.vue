@@ -1,9 +1,9 @@
 <template>
   <section class="container">
-    <div class="testdiv">
+    <div>
       <logo/>
       <h1 class="title">
-        goodatall_diy
+        goodatall_diy222
       </h1>
       <h2 class="subtitle">
         My super-duper Nuxt.js project
@@ -18,8 +18,6 @@
           target="_blank"
           class="button--grey">GitHub</a>
       </div>
-      <nuxt-link to="/plant">Go to /plant</nuxt-link>
-      <nuxt-link to="/mail">Go to /mail</nuxt-link>
     </div>
   </section>
 </template>
@@ -34,10 +32,13 @@ export default {
 }
 </script>
 
-<style lang="less">
+<style>
 
-.testdiv {
+.container {
   min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-align: center;
 }
 
