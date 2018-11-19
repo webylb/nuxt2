@@ -40,7 +40,8 @@ module.exports = {
   */
   plugins: [
     '@/plugins/element-ui',
-    '~/plugins/axios'
+    '~/plugins/axios',
+    '~/plugins/vue-area-linkage'
   ],
 
   /*
