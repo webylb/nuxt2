@@ -16,7 +16,7 @@
               <nuxt-link to="/mail" class="menu-item-link">商城</nuxt-link>
             </div>
             <div class="menu-item">
-              <nuxt-link to="/partner" class="menu-item-link">加工厂</nuxt-link>
+              <nuxt-link to="/plant" class="menu-item-link">加工厂</nuxt-link>
             </div>
             <div class="menu-item">
               <nuxt-link to="/login" class="menu-item-link">登陆</nuxt-link>

@@ -199,7 +199,7 @@ export default {
       console.log("666");
       // 用 class="form-jump" 添加锚点
       let jump = document.querySelector('.form-jump');
-      let total = jump.offsetTop;
+      let total = jump.offsetTop + 400 ;
       let distance = document.documentElement.scrollTop || document.body.scrollTop;
       console.log(total+","+distance);
       // 平滑滚动，时长500ms，每10ms一跳，共50跳
@@ -268,6 +268,10 @@ export default {
       bottom: 50px;
       left: 50%;
       transform: translateX(-50%);
+      -webkit-transform: translateX(-50%);
+      -moz-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+      -o-transform: translateX(-50%);
       width: 385px;
       height: 52px;
       padding: 0;
@@ -319,6 +323,10 @@ export default {
         width: 630px;
         height: auto;
         transform: translateY(-50%);
+        -webkit-transform: translateY(-50%);
+        -moz-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        -o-transform: translateY(-50%);
       }
       .mc-title {
         font-size: 30px;
@@ -447,6 +455,10 @@ export default {
         left: -275px;
         top: 50%;
         transform: translateY(-50%);
+        -webkit-transform: translateY(-50%);
+        -moz-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        -o-transform: translateY(-50%);
       }
       &::after {
         content: "";
@@ -457,6 +469,10 @@ export default {
         right: -275px;
         top: 50%;
         transform: translateY(-50%);
+        -webkit-transform: translateY(-50%);
+        -moz-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        -o-transform: translateY(-50%);
       }
     }
   }
@@ -470,6 +486,10 @@ export default {
         left: 50%;
         width: 520px;
         transform: translateX(-40%);
+        -webkit-transform: translateX(-40%);
+        -moz-transform: translateX(-40%);
+        -ms-transform: translateX(-40%);
+        -o-transform: translateX(-40%);
         &::before {
           content: "";
           position: absolute;
@@ -504,6 +524,10 @@ export default {
             right: -2px;
             top: 50%;
             transform: translateY(-40%);
+            -webkit-transform: translateY(-40%);
+            -moz-transform: translateY(-40%);
+            -ms-transform: translateY(-40%);
+            -o-transform: translateY(-40%);
           }
         }
         .step-text {
