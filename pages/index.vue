@@ -133,7 +133,7 @@
         </el-form>
       </div>
       <!-- section7 -->
-      <h2 class="section-title">
+      <h2 class="section-title form-jump">
         成为XXX的合作伙伴 <br>
         抢占市场先机,赚钱人生的第一桶金 <br>
         欢迎您加入至趣定制系统,共享百亿级定制市场
@@ -201,6 +201,7 @@ export default {
       let jump = document.querySelector('.form-jump');
       let total = jump.offsetTop;
       let distance = document.documentElement.scrollTop || document.body.scrollTop;
+      console.log(total+","+distance);
       // 平滑滚动，时长500ms，每10ms一跳，共50跳
       let step = total / 50;
       if (total > distance) {
