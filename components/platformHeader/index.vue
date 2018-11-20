@@ -13,7 +13,7 @@
               <nuxt-link to="/" class="menu-item-link">首页</nuxt-link>
             </div>
             <div class="menu-item">
-              <nuxt-link to="/mail" class="menu-item-link">商城</nuxt-link>
+              <nuxt-link to="/mall" class="menu-item-link">商城</nuxt-link>
             </div>
             <div class="menu-item">
               <nuxt-link to="/plant" class="menu-item-link">加工厂</nuxt-link>
@@ -31,12 +31,7 @@
 </template>
 
 <script>
-import Logo from '~/components/Logo.vue'
-
 export default {
-  components: {
-    Logo
-  },
   data() {
     return {
       activeIndex: '1',

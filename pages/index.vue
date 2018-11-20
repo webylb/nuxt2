@@ -196,7 +196,6 @@ export default {
   },
   methods: {
     applyAdd(){
-      console.log("666");
       // 用 class="form-jump" 添加锚点
       let jump = document.querySelector('.form-jump');
       let total = jump.offsetTop + 400 ;
@@ -287,6 +286,8 @@ export default {
       background: linear-gradient(#fbf348, #938d1d);
       -moz-box-shadow: -3px 3px 3px #6f6c0d; /* 老的 Firefox */
       box-shadow: -3px 3px 3px #6f6c0d;
+      -moz-box-shadow: -3px 3px 3px #6f6c0d;
+      -webkit-box-shadow: -3px 3px 3px #6f6c0d;
       font-size: 18px;
       font-weight: bold;
       letter-spacing: 4px;
