@@ -1,7 +1,7 @@
 <template>
   <el-row>
     <el-col :xs="24" :sm="24" :md="24" :lg="24" :xl="24">
-      <div class="platfrom-header warp">
+      <div class="mall-header warp">
         <div class="container">
           <div class="header-logo">
             <nuxt-link to="/mall" class="logo-link">
@@ -113,7 +113,10 @@ export default {
 </script>
 
 <style lang="less" scoped>
-.platfrom-header {
+.mall-header {
+  -moz-box-shadow:0px 0px 3px #d4bbbb;
+  -webkit-box-shadow:0px 0px 3px #d4bbbb;
+  box-shadow:0px 0px 3px #d4bbbb;
   height: 70px;
   .container {
     height: 100%;

@@ -44,7 +44,7 @@ export default {
       mallCategory: [
         {
           categoryName:"热门礼品",
-          categoryList : [{img:"/image/hot-gift.jpg",alt:"hot-gift",link:"/mall"},
+          categoryList : [{img:"/image/hot-gift.jpg",alt:"hot-gift",link:"/mall/productDetail/1"},
           {img:"/image/hot-gift.jpg",alt:"hot-gift",link:"/mall"},
           {img:"/image/hot-gift.jpg",alt:"hot-gift",link:"/mall"},
           {img:"/image/hot-gift.jpg",alt:"hot-gift",link:"/mall"},
