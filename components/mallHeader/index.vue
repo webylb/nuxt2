@@ -5,7 +5,7 @@
         <div class="container">
           <div class="header-logo">
             <nuxt-link to="/mall" class="logo-link">
-              <img src="image/logo.png" alt="logo">
+              <img src="/image/logo.png" alt="logo">
             </nuxt-link>
           </div>
           <div class="header-menu">
@@ -73,7 +73,7 @@ export default {
     applyAdd(params){
       // 用 class="category-jump" 添加锚点
       let jump = document.querySelector('.category-jump'+params);
-      let total = jump.offsetTop;
+      let total = jump.offsetTop + window.screen.height;
       let distance = document.documentElement.scrollTop || document.body.scrollTop;
       console.log(total+","+distance);
       // 平滑滚动，时长500ms，每10ms一跳，共50跳

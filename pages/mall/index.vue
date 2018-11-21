@@ -5,11 +5,13 @@
     <div class="container">
       <!-- section content -->
       <section v-for="(item,index) in mallCategory" :key="index" class="hot-gift">
-        <h2>{{ item.categoryName }}</h2>
+        <h2 :class="'category-jump'+(index+1)">{{ item.categoryName }}</h2>
         <div class="gift-list">
           <div v-for="(term,index) in item.categoryList" :key="index" class="gift-item">
-            <img :src="term.img" :alt="term.alt">
-            <p v-if="term.name">{{ term.name }}</p>
+            <nuxt-link :to="term.link">
+              <img :src="term.img" :alt="term.alt">
+              <p v-if="term.name">{{ term.name }}</p>
+            </nuxt-link>
           </div>
         </div>
       </section>
@@ -42,64 +44,64 @@ export default {
       mallCategory: [
         {
           categoryName:"热门礼品",
-          categoryList : [{img:"/image/hot-gift.jpg",alt:"hot-gift"},
-          {img:"/image/hot-gift.jpg",alt:"hot-gift"},
-          {img:"/image/hot-gift.jpg",alt:"hot-gift"},
-          {img:"/image/hot-gift.jpg",alt:"hot-gift"},
-          {img:"/image/hot-gift.jpg",alt:"hot-gift"},
-          {img:"/image/hot-gift.jpg",alt:"hot-gift"},
-          {img:"/image/hot-gift.jpg",alt:"hot-gift"},
-          {img:"/image/hot-gift.jpg",alt:"hot-gift"}]
+          categoryList : [{img:"/image/hot-gift.jpg",alt:"hot-gift",link:"/mall"},
+          {img:"/image/hot-gift.jpg",alt:"hot-gift",link:"/mall"},
+          {img:"/image/hot-gift.jpg",alt:"hot-gift",link:"/mall"},
+          {img:"/image/hot-gift.jpg",alt:"hot-gift",link:"/mall"},
+          {img:"/image/hot-gift.jpg",alt:"hot-gift",link:"/mall"},
+          {img:"/image/hot-gift.jpg",alt:"hot-gift",link:"/mall"},
+          {img:"/image/hot-gift.jpg",alt:"hot-gift",link:"/mall"},
+          {img:"/image/hot-gift.jpg",alt:"hot-gift",link:"/mall"}]
         },
         {
           categoryName:"扩展活动",
-          categoryList : [{img:"/image/hot-gift.jpg",alt:"hot-gift",name:"男士圆领T恤"},
-          {img:"/image/hot-gift.jpg",alt:"hot-gift",name:"男士圆领T恤"},
-          {img:"/image/hot-banner.jpg",alt:"hot-gift",name:"男士圆领T恤"},
-          {img:"/image/hot-gift.jpg",alt:"hot-gift",name:"男士圆领T恤"},
-          {img:"/image/hot-gift.jpg",alt:"hot-gift",name:"男士圆领T恤"},
-          {img:"/image/hot-gift.jpg",alt:"hot-gift",name:"男士圆领T恤"},
-          {img:"/image/hot-gift.jpg",alt:"hot-gift",name:"男士圆领T恤"}]
+          categoryList : [{img:"/image/hot-gift.jpg",alt:"hot-gift",name:"男士圆领T恤",link:"/mall"},
+          {img:"/image/hot-gift.jpg",alt:"hot-gift",name:"男士圆领T恤",link:"/mall"},
+          {img:"/image/hot-banner.jpg",alt:"hot-gift",name:"男士圆领T恤",link:"/mall"},
+          {img:"/image/hot-gift.jpg",alt:"hot-gift",name:"男士圆领T恤",link:"/mall"},
+          {img:"/image/hot-gift.jpg",alt:"hot-gift",name:"男士圆领T恤",link:"/mall"},
+          {img:"/image/hot-gift.jpg",alt:"hot-gift",name:"男士圆领T恤",link:"/mall"},
+          {img:"/image/hot-gift.jpg",alt:"hot-gift",name:"男士圆领T恤",link:"/mall"}]
         },
         {
           categoryName:"办公用品",
-          categoryList : [{img:"/image/hot-gift.jpg",alt:"hot-gift",name:"男士圆领T恤"},
-          {img:"/image/hot-gift.jpg",alt:"hot-gift",name:"男士圆领T恤"},
-          {img:"/image/hot-banner.jpg",alt:"hot-gift",name:"男士圆领T恤"},
-          {img:"/image/hot-gift.jpg",alt:"hot-gift",name:"男士圆领T恤"},
-          {img:"/image/hot-gift.jpg",alt:"hot-gift",name:"男士圆领T恤"},
-          {img:"/image/hot-gift.jpg",alt:"hot-gift",name:"男士圆领T恤"},
-          {img:"/image/hot-gift.jpg",alt:"hot-gift",name:"男士圆领T恤"}]
+          categoryList : [{img:"/image/hot-gift.jpg",alt:"hot-gift",name:"男士圆领T恤",link:"/mall"},
+          {img:"/image/hot-gift.jpg",alt:"hot-gift",name:"男士圆领T恤",link:"/mall"},
+          {img:"/image/hot-banner.jpg",alt:"hot-gift",name:"男士圆领T恤",link:"/mall"},
+          {img:"/image/hot-gift.jpg",alt:"hot-gift",name:"男士圆领T恤",link:"/mall"},
+          {img:"/image/hot-gift.jpg",alt:"hot-gift",name:"男士圆领T恤",link:"/mall"},
+          {img:"/image/hot-gift.jpg",alt:"hot-gift",name:"男士圆领T恤",link:"/mall"},
+          {img:"/image/hot-gift.jpg",alt:"hot-gift",name:"男士圆领T恤",link:"/mall"}]
         },
         {
           categoryName:"节日礼品",
-          categoryList : [{img:"/image/hot-gift.jpg",alt:"hot-gift",name:"男士圆领T恤"},
-          {img:"/image/hot-gift.jpg",alt:"hot-gift",name:"男士圆领T恤"},
-          {img:"/image/hot-banner.jpg",alt:"hot-gift",name:"男士圆领T恤"},
-          {img:"/image/hot-gift.jpg",alt:"hot-gift",name:"男士圆领T恤"},
-          {img:"/image/hot-gift.jpg",alt:"hot-gift",name:"男士圆领T恤"},
-          {img:"/image/hot-gift.jpg",alt:"hot-gift",name:"男士圆领T恤"},
-          {img:"/image/hot-gift.jpg",alt:"hot-gift",name:"男士圆领T恤"}]
+          categoryList : [{img:"/image/hot-gift.jpg",alt:"hot-gift",name:"男士圆领T恤",link:"/mall"},
+          {img:"/image/hot-gift.jpg",alt:"hot-gift",name:"男士圆领T恤",link:"/mall"},
+          {img:"/image/hot-banner.jpg",alt:"hot-gift",name:"男士圆领T恤",link:"/mall"},
+          {img:"/image/hot-gift.jpg",alt:"hot-gift",name:"男士圆领T恤",link:"/mall"},
+          {img:"/image/hot-gift.jpg",alt:"hot-gift",name:"男士圆领T恤",link:"/mall"},
+          {img:"/image/hot-gift.jpg",alt:"hot-gift",name:"男士圆领T恤",link:"/mall"},
+          {img:"/image/hot-gift.jpg",alt:"hot-gift",name:"男士圆领T恤",link:"/mall"}]
         },
         {
           categoryName:"团队服装",
-          categoryList : [{img:"/image/hot-gift.jpg",alt:"hot-gift",name:"男士圆领T恤"},
-          {img:"/image/hot-gift.jpg",alt:"hot-gift",name:"男士圆领T恤"},
-          {img:"/image/hot-banner.jpg",alt:"hot-gift",name:"男士圆领T恤"},
-          {img:"/image/hot-gift.jpg",alt:"hot-gift",name:"男士圆领T恤"},
-          {img:"/image/hot-gift.jpg",alt:"hot-gift",name:"男士圆领T恤"},
-          {img:"/image/hot-gift.jpg",alt:"hot-gift",name:"男士圆领T恤"},
-          {img:"/image/hot-gift.jpg",alt:"hot-gift",name:"男士圆领T恤"}]
+          categoryList : [{img:"/image/hot-gift.jpg",alt:"hot-gift",name:"男士圆领T恤",link:"/mall"},
+          {img:"/image/hot-gift.jpg",alt:"hot-gift",name:"男士圆领T恤",link:"/mall"},
+          {img:"/image/hot-banner.jpg",alt:"hot-gift",name:"男士圆领T恤",link:"/mall"},
+          {img:"/image/hot-gift.jpg",alt:"hot-gift",name:"男士圆领T恤",link:"/mall"},
+          {img:"/image/hot-gift.jpg",alt:"hot-gift",name:"男士圆领T恤",link:"/mall"},
+          {img:"/image/hot-gift.jpg",alt:"hot-gift",name:"男士圆领T恤",link:"/mall"},
+          {img:"/image/hot-gift.jpg",alt:"hot-gift",name:"男士圆领T恤",link:"/mall"}]
         },
         {
           categoryName:"体育运动",
-          categoryList : [{img:"/image/hot-gift.jpg",alt:"hot-gift",name:"男士圆领T恤"},
-          {img:"/image/hot-gift.jpg",alt:"hot-gift",name:"男士圆领T恤"},
-          {img:"/image/hot-banner.jpg",alt:"hot-gift",name:"男士圆领T恤"},
-          {img:"/image/hot-gift.jpg",alt:"hot-gift",name:"男士圆领T恤"},
-          {img:"/image/hot-gift.jpg",alt:"hot-gift",name:"男士圆领T恤"},
-          {img:"/image/hot-gift.jpg",alt:"hot-gift",name:"男士圆领T恤"},
-          {img:"/image/hot-gift.jpg",alt:"hot-gift",name:"男士圆领T恤"}]
+          categoryList : [{img:"/image/hot-gift.jpg",alt:"hot-gift",name:"男士圆领T恤",link:"/mall"},
+          {img:"/image/hot-gift.jpg",alt:"hot-gift",name:"男士圆领T恤",link:"/mall"},
+          {img:"/image/hot-banner.jpg",alt:"hot-gift",name:"男士圆领T恤",link:"/mall"},
+          {img:"/image/hot-gift.jpg",alt:"hot-gift",name:"男士圆领T恤",link:"/mall"},
+          {img:"/image/hot-gift.jpg",alt:"hot-gift",name:"男士圆领T恤",link:"/mall"},
+          {img:"/image/hot-gift.jpg",alt:"hot-gift",name:"男士圆领T恤",link:"/mall"},
+          {img:"/image/hot-gift.jpg",alt:"hot-gift",name:"男士圆领T恤",link:"/mall"}]
         }
       ],
     }
@@ -142,6 +144,9 @@ export default {
         img {
           width: 100%;
           height: auto;
+        }
+        p {
+          color: #333;
         }
       }
     }
