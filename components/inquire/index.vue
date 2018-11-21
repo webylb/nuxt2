@@ -24,7 +24,7 @@
             <el-input v-model="ruleForm.pass" type="password" autocomplete="off" prefix-icon="el-icon-mobile-phone" placeholder="请输入密码"/>
           </el-form-item> -->
           <el-form-item class="Inquire-buttonGroup">
-            <el-button class="subRegisterForm" @click="submitForm('ruleForm')">登录</el-button>
+            <el-button class="subRegisterForm" @click="submitForm('ruleForm')">提交</el-button>
             <el-button class="rebRegisterForm" @click="closeInquire">取消</el-button>
           </el-form-item>
         </el-form>
