@@ -173,7 +173,7 @@ export default {
       ruleForm: {
         name: '',
         phone: '',
-        sex:'',
+        sex:'男士',
         city: ''
       },
       rules: {
@@ -189,7 +189,7 @@ export default {
           { required: true, message: '请选择性别', trigger: 'change' }
         ],
         city: [
-          { required: true, message: '请填写活动形式', trigger: 'blur' }
+          { required: true, message: '请选择所在', trigger: 'blur' }
         ]
       }
     };
